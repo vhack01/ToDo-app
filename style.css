@@ -1,0 +1,141 @@
+:root {
+    --color-heading: #232222;
+    --color-text: #555555;
+    --color-primary: #55C875;
+    --color-secondary: #EEE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0rem;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* icons */
+.icon-container {
+    height: 3rem;
+    width: 3rem;
+    display: inline-flex;
+    background-color: var(--color-secondary);
+    border-radius: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+/* button */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 1.5rem 2rem;
+    border: 0;
+    transition: background-color 0.3s;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+    background-color: #1cba49;
+}
+
+.btn--secondary {
+    background-color: var(--color-primary);
+}
+
+.btn--icon {
+    margin-right: 0.5rem;
+}
+
+/* navbar */
+.grid {
+    display: grid;
+}
+
+.navbar {
+    border-bottom: 2px solid #b1b0b044;
+    padding: 1rem 2rem;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand__logo {
+    margin-right: 1rem;
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-primary);
+}
+
+.brand__name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar-btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon--filter {
+    height: 4.3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.icon--filter:hover {
+    background-color: #ddd;
+}
+
+.btn--new-task {
+    padding: 1rem 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand {
+        justify-content: flex-start;
+    }
+
+    .navbar-btn-group {
+        justify-content: flex-end;
+    }
+}
