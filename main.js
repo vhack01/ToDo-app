@@ -127,9 +127,9 @@ let createTask = (t = tasks) => {
     else {
         taskContainer.innerHTML = `<div class="not-found">
         <picture>
-            <source type="image/webp" src="./images/empty.webp">
-            <source type="image/png" src="./images/empty.png">
-            <img src="./images/empty.png" alt="">
+            <source type="image/webp" src="./images/notFound.webp">
+            <source type="image/png" src="./images/notFound.png">
+            <img src="images/notFound.png" alt="">
         </picture>
         <p class="not-found-label"> Task list is empty.</p>
     </div>`;
