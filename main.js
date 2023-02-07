@@ -101,7 +101,7 @@ let createTask = (t = tasks) => {
             let { id, title, dueDate, description, status } = obj;
             return `<div class="task-list" id=task-id-${id}>
             <svg class="icon task--status" onclick=changeStatus(${id}) style="fill : ${status === 0 ? 'var(--color-text)' : 'var(--color-primary)'}">
-                <use xlink:href="images/sprite.svg#${status === 0 ? 'circle' : 'taskdone'}"></use>
+                <use href="images/sprite.svg#${status === 0 ? 'circle' : 'taskdone'}"></use>
             </svg>
             <div class="task__title">
                 <span class="task__title-name">${title}</span>
@@ -111,12 +111,12 @@ let createTask = (t = tasks) => {
             <div class="task-list__action-btn">
                 <span class="icon-container icon--task-list-action" onclick=updateTask(${id})>
                     <svg class="icon btn--edit-delete">
-                        <use xlink:href="images/sprite.svg#edit"></use>
+                        <use href="images/sprite.svg#edit"></use>
                     </svg>
                 </span>
                 <span class="icon-container icon--task-list-action" onclick=deleteTask(${id})>
                     <svg class="icon btn--edit-delete">
-                        <use xlink:href="images/sprite.svg#delete"></use>
+                        <use href="images/sprite.svg#delete"></use>
                     </svg>
                 </span>
             </div>
