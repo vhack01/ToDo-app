@@ -16,18 +16,15 @@
 
     <nav class="navbar grid grid-1x2">
         <div class="brand">
-            <svg class="icon brand__logo">
-                <use xlink:href="images/sprite.svg#logo"></use>
-            </svg>
-            <span class="brand__name">ToDo</span>
+            <a href="/" target="_blank" class="navbar-anchor">
+                <svg class="icon brand__logo">
+                    <use xlink:href="images/sprite.svg#logo"></use>
+                </svg>
+                <span class="brand__name">ToDo</span>
+            </a>
         </div>
 
         <div class="navbar-btn-group">
-            <span class="icon-container icon--filter">
-                <svg class="icon">
-                    <use xlink:href="images/sprite.svg#filter"></use>
-                </svg>
-            </span>
             <button class="btn btn--primary btn--new-task" type="submit">
                 <svg class="icon btn--icon">
                     <use xlink:href="images/sprite.svg#add"></use>
@@ -69,7 +66,14 @@
                 </div>
             </div>
             <div class="right-sidebar">
-                <h3>Task List</h3>
+                <div class="filterbar">
+                    <h3>Task List</h3>
+                    <div class="filter-menu">
+                        <span class="filter-btn all-btn">All</span>
+                        <span class="filter-btn completed-btn">Completed</span>
+                        <span class="filter-btn uncompleted-btn">Uncompleted</span>
+                    </div>
+                </div>
                 <div class="task-list-container">
 
                 </div>
