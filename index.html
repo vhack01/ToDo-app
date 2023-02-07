@@ -14,38 +14,68 @@
 
 <body>
 
-    <section class="main--container grid">
-
-        <div class="right-sidebar">
-
-            <div class="task-list">
-                <svg class="icon task--status">
-                    <use xlink:href="images/sprite.svg#circle"></use>
-                </svg>
-                <div class="task__title">
-                    <span class="task__title-name">David John</span>
-                    <span class="task__title-date">2-6-2023</span>
-                </div>
-                
-                <p class="task__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, saepe!</p>
-                
-                <div class="task-list__action-btn">
-                    <span class="icon-container icon--task-list-action">
-                        <svg class="icon">
-                            <use xlink:href="images/sprite.svg#edit"></use>
-                        </svg>
-                    </span>
-                    <span class="icon-container icon--task-list-action">
-                        <svg class="icon">
-                            <use xlink:href="images/sprite.svg#delete"></use>
-                        </svg>
-                    </span>
-                </div>
-            </div>
-
+    <nav class="navbar grid grid-1x2">
+        <div class="brand">
+            <svg class="icon brand__logo">
+                <use xlink:href="images/sprite.svg#logo"></use>
+            </svg>
+            <span class="brand__name">ToDo</span>
         </div>
 
-    </section>
+        <div class="navbar-btn-group">
+            <span class="icon-container icon--filter">
+                <svg class="icon">
+                    <use xlink:href="images/sprite.svg#filter"></use>
+                </svg>
+            </span>
+            <button class="btn btn--primary btn--new-task" type="submit">
+                <svg class="icon btn--icon">
+                    <use xlink:href="images/sprite.svg#add"></use>
+                </svg>
+                <span>New Task</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="main--container grid grid-1x3">
+            <div class="left-sidebar">
+                <div class="profile">
+                    <img src="images/avatar.png" alt="" class="avatar">
+                    <h3 class="name">Lorem Ipsum</h3>
+                    <span class="email">Loremipsum@gmail.com</span>
+                </div>
+                <div class="task--creator">
+                    <h3 class="label--new-task">New Task</h3>
+                    <form class="form--task">
+                        <fieldset class="fieldset--task">
+                            <legend><label for="task-title" class="label--legend">Task Title</label></legend>
+                            <input type="text" name="" id="task-title" class="input" placeholder="Enter title of task">
+                        </fieldset>
+                        <p class="error-message"></p>
+                        <fieldset class="fieldset--task">
+                            <legend><label for="due-date" class="label--legend">Due Data</label></legend>
+                            <input type="date" name="" id="due-date" class="input">
+                        </fieldset>
+                        <fieldset class="fieldset--task">
+                            <legend><label for="description" class="label--legend">Description</label></legend>
+                            <textarea name="" cols="40" id="description" placeholder="Type here..."
+                                class="input task-description"></textarea>
+                        </fieldset>
+                        <div class="btn--actions">
+                            <button class="btn btn--primary btn--create" type="submit">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <h3>Task List</h3>
+                <div class="task-list-container">
+
+                </div>
+            </div>
+        </section>
+    </div>
 
 </body>
 <script src="main.js"></script>
